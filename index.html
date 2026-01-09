@@ -1,118 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ntombifuthi Mashinini | Portfolio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ntombifuthi Mashinini | Portfolio</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- AOS Animation -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 
-  <!-- EmailJS -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body class="dark">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="dark">
+    <!-- THEME TOGGLE -->
+    <button class="theme-toggle" id="themeToggle">🌙</button>
 
-  <!-- THEME TOGGLE -->
-  <button class="theme-toggle" id="themeToggle">🌙</button>
+    <!-- HERO -->
+    <section class="hero glass">
+      <div class="container" data-aos="fade-up">
+        <h1>Hi, I’m <span>Ntombifuthi Mashinini</span></h1>
+        <h2>MERN Stack Developer | Web Developer</h2>
+        <p class="tagline">Turning problems into clean, functional code.</p>
 
-  <!-- HERO -->
-  <section class="hero glass">
-    <div class="container" data-aos="fade-up">
-      <h1>Hi, I’m <span>Ntombifuthi Mashinini</span></h1>
-      <h2>MERN Stack Developer | Web Developer</h2>
-      <p class="tagline">Turning problems into clean, functional code.</p>
-
-      <div class="hero-buttons">
-        <a href="#projects" class="btn primary">View Projects</a>
-        <a href="#" class="btn secondary">Download CV</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about glass">
-    <div class="container" data-aos="fade-up">
-      <h3>About Me</h3>
-      <p>
-        I am a motivated MERN Stack developer on a mission to grow, build, and create impactful digital experiences.
-        I focus on writing clean, scalable code and building applications that solve real-world problems.
-      </p>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="skills glass">
-    <div class="container" data-aos="fade-up">
-      <h3>Skills</h3>
-      <p class="skills-line">
-        MERN Stack • HTML • CSS • JavaScript • React • Node • Express • MongoDB • Git • REST APIs
-      </p>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="projects glass" id="projects">
-    <div class="container">
-      <h3 data-aos="fade-up">Projects</h3>
-      <p class="projects-note" data-aos="fade-up">
-        Kindly note that the projects showcased in this portfolio are built for real businesses and real people.
-      </p>
-
-      <div class="project-grid">
-        <div class="project-card" data-aos="fade-up">
-          <img src="assets/images/placeholder.png" alt="Shopify Store">
-          <h4>Shopify E-commerce Store</h4>
-          <p>A fully functional Shopify store built for a real business.</p>
-          <a href="https://ac7e5x-8s.myshopify.com" target="_blank">View Project →</a>
-        </div>
-
-        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-          <img src="assets/images/placeholder.png" alt="FinTech Website">
-          <h4>FinTech Company Website</h4>
-          <p>Corporate website currently in development.</p>
-          <span class="status">In Progress</span>
-        </div>
-
-        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-          <img src="assets/images/placeholder.png" alt="FinTech Dashboard">
-          <h4>FinTech Dashboard</h4>
-          <p>Data-driven dashboard for business operations.</p>
-          <span class="status">Coming Soon</span>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn primary">View Projects</a>
+          <a href="#" class="btn secondary">Download CV</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section class="contact glass">
-    <div class="container" data-aos="fade-up">
-      <h3>Contact</h3>
-      <p>I’m open to collaboration, freelance opportunities, and full-time roles.</p>
+    <!-- ABOUT -->
+    <section class="about glass">
+      <div class="container" data-aos="fade-up">
+        <h3>About Me</h3>
+        <p>
+          I am a motivated MERN Stack developer on a mission to grow, build, and
+          create impactful digital experiences. I focus on writing clean,
+          scalable code and building applications that solve real-world
+          problems.
+        </p>
+      </div>
+    </section>
 
-      <form id="contactForm">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn primary">Send Message</button>
-        <p class="form-status" id="formStatus"></p>
-      </form>
-    </div>
-  </section>
+    <!-- SKILLS -->
+    <section class="skills glass">
+      <div class="container" data-aos="fade-up">
+        <h3>Skills</h3>
+        <p class="skills-line">
+          MERN Stack • HTML • CSS • JavaScript • React • Node • Express •
+          MongoDB • Git • REST APIs
+        </p>
+      </div>
+    </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Ntombifuthi Mashinini. All rights reserved.</p>
-  </footer>
+    <!-- PROJECTS -->
+    <section class="projects glass" id="projects">
+      <div class="container">
+        <h3 data-aos="fade-up">Projects</h3>
+        <p class="projects-note" data-aos="fade-up">
+          Kindly note that the projects showcased in this portfolio are built
+          for real businesses and real people.
+        </p>
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="js/main.js"></script>
-</body>
+        <div class="project-grid">
+          <div class="project-card" data-aos="fade-up">
+            <img src="assets/images/placeholder.png" alt="Shopify Store" />
+            <h4>Shopify E-commerce Store</h4>
+            <p>A fully functional Shopify store built for a real business.</p>
+            <a href="https://ac7e5x-8s.myshopify.com" target="_blank"
+              >View Project →</a
+            >
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/images/placeholder.png" alt="FinTech Website" />
+            <h4>FinTech Company Website</h4>
+            <p>Corporate website currently in development.</p>
+            <span class="status">In Progress</span>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/images/placeholder.png" alt="FinTech Dashboard" />
+            <h4>FinTech Dashboard</h4>
+            <p>Data-driven dashboard for business operations.</p>
+            <span class="status">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact glass">
+      <div class="container" data-aos="fade-up">
+        <h3>Contact</h3>
+        <p>
+          I’m open to collaboration, freelance opportunities, and full-time
+          roles.
+        </p>
+
+        <form id="contactForm">
+          <input
+            type="text"
+            name="from_name"
+            placeholder="Your Name"
+            required
+          />
+          <input
+            type="email"
+            name="reply_to"
+            placeholder="Your Email"
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit" class="btn primary">Send Message</button>
+          <p class="form-status" id="formStatus"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2026 Ntombifuthi Mashinini. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
