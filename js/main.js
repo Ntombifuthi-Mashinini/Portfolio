@@ -1,4 +1,4 @@
-// AOS
+// AOS Initialization
 AOS.init({
   duration: 800,
   once: true,
@@ -6,12 +6,16 @@ AOS.init({
 
 // Theme Toggle
 const toggle = document.getElementById("themeToggle");
+
 toggle.addEventListener("click", () => {
   document.body.classList.toggle("light");
-  toggle.textContent = document.body.classList.contains("light") ? "🌞" : "🌙";
+
+  toggle.textContent = document.body.classList.contains("light")
+    ? "🌞"
+    : "🌙";
 });
 
-// EmailJS Init
+// EmailJS Initialization
 (function () {
   emailjs.init("cijsLkAnRIkU_SuPr");
 })();
@@ -22,15 +26,18 @@ const status = document.getElementById("formStatus");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  emailjs.sendForm("service_q45bjf9", "template_vq8lr73", this).then(
-    () => {
-      status.textContent = "Message sent successfully!";
-      status.style.color = "#38bdf8";
-      form.reset();
-    },
-    () => {
-      status.textContent = "Something went wrong. Please try again.";
-      status.style.color = "red";
-    }
-  );
+  emailjs
+    .sendForm("service_q45bjf9", "template_vq8lr73", this)
+    .then(
+      () => {
+        status.textContent = "Message sent successfully!";
+        status.style.color = "#38bdf8";
+        form.reset();
+      },
+      () => {
+        status.textContent =
+          "Something went wrong. Please try again.";
+        status.style.color = "red";
+      }
+    );
 });
